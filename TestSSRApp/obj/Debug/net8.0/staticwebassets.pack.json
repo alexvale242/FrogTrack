@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TestSSRApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TestSSRApp.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

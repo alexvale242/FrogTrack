@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kyXhenyJ7bhJ782HBr/JVulcj/67EcPQJdoDdv+Q7yc=",
+  "Hash": "TkD/7wQbkgoei181yfy3gBNX9DAmCJKJTZBVMNoVwc0=",
   "Source": "TestSSRApp",
   "BasePath": "_content/TestSSRApp",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TestSSRApp.styles.css",
-      "SourceId": "TestSSRApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/TestSSRApp",
-      "RelativePath": "TestSSRApp.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TestSSRApp.styles.css"
-    },
-    {
-      "Identity": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TestSSRApp.bundle.scp.css",
-      "SourceId": "TestSSRApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/TestSSRApp",
-      "RelativePath": "TestSSRApp.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TestSSRApp.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Projects\\UX\\TestSSRApp\\TestSSRApp\\wwwroot\\css\\app.css",
       "SourceId": "TestSSRApp",

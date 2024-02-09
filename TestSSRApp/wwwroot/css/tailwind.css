@@ -552,13 +552,30 @@ video {
   display: table !important;
 }
 
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+.bg-brand-background-secondary {
+  background-color: var(--eds-color-steel-10) !important;
+}
+
 .px-3 {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
 }
 
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
 .ps-3 {
   padding-inline-start: 0.75rem !important;
+}
+
+.pl-4 {
+  padding-left: 1rem !important;
 }
 
 .text-orange-90 {

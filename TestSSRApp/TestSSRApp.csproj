@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+<!--    <Target Name="CheckForNpm">-->
+<!--        <Message Importance="high" Text="Checking for NPM..." />-->
+<!--        <Exec Command="npm &#45;&#45;version" ContinueOnError="true">-->
+<!--            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />-->
+<!--        </Exec>-->
+<!--        <Error Condition="'$(ErrorCode)' != '0'" Text="NPM is required to build this project." />-->
+<!--    </Target>-->
+    
+    <Target Name="RunNpmInstall" Inputs="package.json" Outputs="$(NpmLastInstall)">
+        <Message Importance="high" Text="Running NPM install..." />
+        <Exec Command="npm install" />
+        <Touch Files="$(NpmLastInstall)" AlwaysCreate="true" />
+    </Target>
+
+    <Target Name="BuildSass" DependsOnTargets="RunNpmInstall" BeforeTargets="Compile" Inputs="Styles/app.scss" Outputs="wwwroot/css/app.css">
+        <Message Importance="high" Text="Building Common Sass..." />
+        <Exec Command="npm run build-sass" />
+    </Target>
+
+<!--    <Target Name="CompileScopedScss" DependsOnTargets="RunNpmInstall" BeforeTargets="Compile">-->
+<!--        <Message Importance="high" Text="Building Component Sass..." />-->
+<!--        <ItemGroup>-->
+<!--            <ScopedScssFiles Include="**/*.razor.scss" />-->
+<!--        </ItemGroup>-->
+
+<!--        <Exec Command="npx sass &#45;&#45; %(ScopedScssFiles.Identity) %(relativedir)%(filename).css" />-->
+<!--    </Target>-->
+    
+    <Target Name="BuildCSS" BeforeTargets="Compile">
+        <Message Importance="high" Text="Building Tailwind styles..." />
+        <Exec EnvironmentVariables="NODE_ENV=production" Command="npx tailwindcss -i Styles/tailwind.css -o wwwroot/css/tailwind.css --minify" Condition=" '$(Configuration)' == 'Release' " />
+    </Target>
+</Project>

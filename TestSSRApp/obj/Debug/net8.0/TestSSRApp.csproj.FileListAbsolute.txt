@@ -26,3 +26,5 @@ C:\Projects\UX\TestSSRApp\TestSSRApp\obj\Debug\net8.0\TestSSRApp.genruntimeconfi
 C:\Projects\UX\TestSSRApp\TestSSRApp\obj\Debug\net8.0\ref\TestSSRApp.dll
 C:\Projects\UX\TestSSRApp\TestSSRApp\bin\Debug\net8.0\package-lock.json
 C:\Projects\UX\TestSSRApp\TestSSRApp\bin\Debug\net8.0\package.json
+C:\Projects\UX\TestSSRApp\TestSSRApp\obj\Debug\net8.0\scopedcss\Features\FrogListing\Components\FrogTile.razor.rz.scp.css
+C:\Projects\UX\TestSSRApp\TestSSRApp\obj\Debug\net8.0\scopedcss\projectbundle\TestSSRApp.bundle.scp.css

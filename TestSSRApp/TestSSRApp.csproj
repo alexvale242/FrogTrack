@@ -25,14 +25,14 @@
         <Exec Command="npm run build-sass" />
     </Target>
 
-<!--    <Target Name="CompileScopedScss" DependsOnTargets="RunNpmInstall" BeforeTargets="Compile">-->
-<!--        <Message Importance="high" Text="Building Component Sass..." />-->
-<!--        <ItemGroup>-->
-<!--            <ScopedScssFiles Include="**/*.razor.scss" />-->
-<!--        </ItemGroup>-->
+    <Target Name="CompileScopedScss" DependsOnTargets="RunNpmInstall" BeforeTargets="Compile">
+        <Message Importance="high" Text="Building Component Sass..." />
+        <ItemGroup>
+            <ScopedScssFiles Include="**/*.razor.scss" />
+        </ItemGroup>
 
-<!--        <Exec Command="npx sass &#45;&#45; %(ScopedScssFiles.Identity) %(relativedir)%(filename).css" />-->
-<!--    </Target>-->
+        <Exec Command="npx sass -- %(ScopedScssFiles.Identity) %(relativedir)%(filename).css" />
+    </Target>
     
     <Target Name="BuildCSS" BeforeTargets="Compile">
         <Message Importance="high" Text="Building Tailwind styles..." />

@@ -11,13 +11,13 @@ public class GetFrogs(ILogger<GetFrogs> logger)
         var frogs = new Frog[]
         {
             new(Guid.NewGuid(), "smol"),
-            new(Guid.NewGuid(), "moss"),
+            new(Guid.NewGuid(), "wholesome"),
             new(Guid.NewGuid(), "rose"),
             new(Guid.NewGuid(), "spots"),
             new(Guid.NewGuid(), "happy"),
             new(Guid.NewGuid(), "angry"),
-            new(Guid.NewGuid(), "wholesome"),
             new(Guid.NewGuid(), "plant"),
+            new(Guid.NewGuid(), "moss"),
             new(Guid.NewGuid(), "berry"),
         };
         

@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "build-js": "parcel build eds.js --dist-dir wwwroot/js/",
-    "build-sass": "sass Styles/app.scss wwwroot/css/app.css",
-  },
-  "dependencies": {
-    "sass": "^1.70.0"
-  }
-}

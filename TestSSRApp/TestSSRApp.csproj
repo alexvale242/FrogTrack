@@ -6,6 +6,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.2.0" />
+      <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    </ItemGroup>
+
 <!--    <Target Name="CheckForNpm">-->
 <!--        <Message Importance="high" Text="Checking for NPM..." />-->
 <!--        <Exec Command="npm &#45;&#45;version" ContinueOnError="true">-->

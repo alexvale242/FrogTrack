@@ -1,13 +1,29 @@
 @page "/FrogListing"
 
 @using TestSSRApp.Features.FrogListing.Components
+@using TestSSRApp.Features.FrogListing.Models
+@using TestSSRApp.Features.FrogListing.Queries
 
-<div class="flex w-screen h-screen justify-center items-center">
-    <div class="w-48 h-48">
-        <FrogTile></FrogTile>
-    </div>
+@inject GetFrogs GetFrogs;
+
+<div class="grid grid-cols-3 gap-4 h-full justify-center items-center px-16 py-8">
+    @foreach (var frog in _frogs)
+    {
+        <FrogTile FrogName="@frog.Name"></FrogTile>
+    }
+
 </div>
 
+
 @code {
-    
+
+    Frog[] _frogs = [];
+
+    protected override Task OnInitializedAsync() => GetFrogsFromServer();
+
+    private async Task GetFrogsFromServer()
+    {
+        _frogs = await GetFrogs.GetFrogsFromMock();
+    }
+
 }

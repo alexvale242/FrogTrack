@@ -1,10 +1,15 @@
 using TestSSRApp;
+using TestSSRApp.Features.FrogListing.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
+builder.Services.AddScoped<GetFrogs>();
 
 var app = builder.Build();
 

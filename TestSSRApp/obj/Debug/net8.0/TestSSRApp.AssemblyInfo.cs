@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestSSRApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbb6d864bc0ec406764241f888587fb101e45c38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a519bebeec9c8e9ad1f07fc69db880c441df7d1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestSSRApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestSSRApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

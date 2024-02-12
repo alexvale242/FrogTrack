@@ -1,4 +1,4 @@
-using TestSSRApp.Components;
+using TestSSRApp;
 
 var builder = WebApplication.CreateBuilder(args);
 

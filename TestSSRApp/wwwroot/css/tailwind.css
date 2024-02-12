@@ -548,21 +548,44 @@ video {
   position: static !important;
 }
 
+.flex {
+  display: flex !important;
+}
+
 .table {
   display: table !important;
+}
+
+.h-48 {
+  height: 12rem !important;
+}
+
+.h-screen {
+  height: 100vh !important;
 }
 
 .min-h-screen {
   min-height: 100vh !important;
 }
 
-.bg-brand-background-secondary {
-  background-color: var(--eds-color-steel-10) !important;
+.w-48 {
+  width: 12rem !important;
 }
 
-.px-3 {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
+.w-screen {
+  width: 100vw !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.bg-brand-background-secondary {
+  background-color: var(--eds-color-steel-10) !important;
 }
 
 .py-2 {
@@ -570,14 +593,6 @@ video {
   padding-bottom: 0.5rem !important;
 }
 
-.ps-3 {
-  padding-inline-start: 0.75rem !important;
-}
-
 .pl-4 {
   padding-left: 1rem !important;
-}
-
-.text-orange-90 {
-  color: var(--eds-color-orange-90) !important;
 }

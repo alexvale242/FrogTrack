@@ -2,6 +2,7 @@
   "scripts": {
     "build-js": "parcel build eds.js --dist-dir wwwroot/js/",
     "build-sass": "sass Styles/app.scss wwwroot/css/app.css",
+    "tailwind": "npx tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css --watch"
   },
   "dependencies": {
     "sass": "^1.70.0"

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSSRApp", "TestSSRApp\TestSSRApp.csproj", "{754BB248-076D-4926-8C93-D36F8331F00A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos", "Cosmos\Cosmos.csproj", "{F948C4B3-9C6B-4634-8A5E-C1EE717E8AFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{754BB248-076D-4926-8C93-D36F8331F00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754BB248-076D-4926-8C93-D36F8331F00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754BB248-076D-4926-8C93-D36F8331F00A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F948C4B3-9C6B-4634-8A5E-C1EE717E8AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F948C4B3-9C6B-4634-8A5E-C1EE717E8AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F948C4B3-9C6B-4634-8A5E-C1EE717E8AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F948C4B3-9C6B-4634-8A5E-C1EE717E8AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

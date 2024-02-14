@@ -1,5 +1,5 @@
 using TestSSRApp;
-using TestSSRApp.Features.FrogListing.Queries;
+using TestSSRApp.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
-builder.Services.AddScoped<GetFrogs>();
+builder.Services.AddCosmosDbClient(builder.Configuration);
 
 var app = builder.Build();
 

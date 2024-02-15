@@ -1,5 +1,7 @@
-namespace TestSSRApp.Infrastructure;
+namespace DataSeed.Infrastructure;
 
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Cosmos;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Options;

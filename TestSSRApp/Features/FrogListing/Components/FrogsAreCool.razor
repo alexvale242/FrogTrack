@@ -1,0 +1,32 @@
+@inject IJSRuntime Js
+@rendermode InteractiveServer
+
+@code {
+    private IJSObjectReference? _module;
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var module = await GetModule();
+            await module.InvokeAsync<IJSObjectReference>("frogsAreCool");
+        }
+    }
+    
+    private async Task<IJSObjectReference> GetModule()
+    {
+        if (_module is null)
+        {
+            try
+            {
+                _module = await Js.InvokeAsync<IJSObjectReference>("import", "./Features/FrogListing/FrogListingPage.razor.js");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+        return _module;
+    }
+}

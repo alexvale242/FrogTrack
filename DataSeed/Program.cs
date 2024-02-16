@@ -21,10 +21,10 @@ var host = Host.CreateDefaultBuilder()
 }).ConfigureServices((context, services) =>
 {
     services.AddCosmosDbClient(context.Configuration);
-    services.AddSingleton<FrogSeed>();
+    services.AddSingleton<FrogSpawn>();
 }).Build();
 
 Console.WriteLine("Hello, World!");
 
-var seed = host.Services.GetRequiredService<FrogSeed>();
+var seed = host.Services.GetRequiredService<FrogSpawn>();
 await seed.SeedFrogs();

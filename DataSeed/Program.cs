@@ -24,7 +24,5 @@ var host = Host.CreateDefaultBuilder()
     services.AddSingleton<FrogSpawn>();
 }).Build();
 
-Console.WriteLine("Hello, World!");
-
 var seed = host.Services.GetRequiredService<FrogSpawn>();
 await seed.SeedFrogs();

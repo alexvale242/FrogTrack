@@ -2,32 +2,32 @@
 @rendermode InteractiveServer
 
 @* Very basic component that showcases how to do JS interoperability in a BlazorSSR environment *@
+
 @code {
     private IJSObjectReference? _module;
-    
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            var module = await GetModule();
-            await module.InvokeAsync<IJSObjectReference>("frogsAreCool");
+            await GetModule();
+        }
+        
+        if (_module is not null)
+        {
+            await _module.InvokeVoidAsync("frogsAreCool");
         }
     }
-    
-    private async Task<IJSObjectReference> GetModule()
-    {
-        if (_module is null)
-        {
-            try
-            {
-                _module = await Js.InvokeAsync<IJSObjectReference>("import", "./Features/FrogListing/FrogListingPage.razor.js");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-        }
 
-        return _module;
+    private async Task GetModule()
+    {
+        try
+        {
+            _module = await Js.InvokeAsync<IJSObjectReference>("import", "./Features/FrogListing/Components/FrogsAreCool.razor.js");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }

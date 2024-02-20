@@ -9,7 +9,7 @@ public class GetFrogs
     {
     }
 
-    public record Frog(Guid Id, string Name);
+    public record Frog(Guid Id, string Name, string? Description);
 
     public class Handler(ILogger<GetFrogs> logger, ICosmosDbContainerFactory cosmosDbContainerFactory) : IRequestHandler<Request, Frog[]>
     {
@@ -23,7 +23,7 @@ public class GetFrogs
             {
                 var query = await container.GetItemLinqQueryable<Cosmos.Models.Frog>().ToFeedResponseAsync(cancellationToken);
 
-                var frogs = query.Select(o => new Frog(o.Id, o.Name)).ToArray();
+                var frogs = query.Select(o => new Frog(o.Id, o.Name, o.Description)).ToArray();
                 return await Task.FromResult(frogs);
             }
             catch (Exception e)

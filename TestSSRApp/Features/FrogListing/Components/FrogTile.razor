@@ -5,9 +5,11 @@
     <div class="tile-description__container">
         <h2 class="tile-description__name">@FrogName</h2>
     </div>
+
 </div>
 
 
 @code {
     [Parameter, EditorRequired] public string FrogName { get; set; } = string.Empty;
+    [Parameter] public string? Description { get; set; } = string.Empty;
 }

@@ -1,13 +1,13 @@
 <div class="tile__container">
-    <div class="tile-image__container">
-        <img src="https://frogs.media/api/images/@FrogName" alt="Image of the frog in question"/>
-    </div>
+    <img
+        class="tile__image"
+        src="https://frogs.media/api/images/@FrogName"
+        alt="The frog in question"/>
     <div class="tile-description__container">
         <h2 class="tile-description__name">@FrogName</h2>
+        <p class="tile-description__description">@Description</p>
     </div>
-
 </div>
-
 
 @code {
     [Parameter, EditorRequired] public string FrogName { get; set; } = string.Empty;

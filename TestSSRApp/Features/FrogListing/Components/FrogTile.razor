@@ -1,5 +1,9 @@
-<div class="tile__container">
+@inject IJSRuntime Js
+@inject ILogger<FrogTile> Logger;
+
+<div class="tile__container @_aspect">
     <img
+        @ref="_frogImage"
         class="tile__image"
         src="https://frogs.media/api/images/@FrogName"
         alt="The frog in question"/>
@@ -12,4 +16,66 @@
 @code {
     [Parameter, EditorRequired] public string FrogName { get; set; } = string.Empty;
     [Parameter] public string? Description { get; set; } = string.Empty;
+    
+    private string _aspect = "meep";
+    private IJSObjectReference? _module;
+    private ElementReference _frogImage;
+    private DotNetObjectReference<FrogTile>? _self;
+
+    protected override void OnInitialized()
+    {
+        _self = DotNetObjectReference.Create(this);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await GetModule();
+            if (_module is not null)
+            {
+                await _module.InvokeAsync<string>("getImageSize", _frogImage, _self);
+            }
+        }
+    }
+
+    private async Task GetModule()
+    {
+        try
+        {
+            _module = await Js.InvokeAsync<IJSObjectReference>("import", "./Features/FrogListing/Components/FrogTile.razor.js");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+
+    [JSInvokable]
+    public void SetImageSize(string aspect)
+    {
+        switch (aspect)
+        {
+            case "tall":
+                _aspect = "tile__container--tall";
+                StateHasChanged();
+                break;
+            case "wide":
+                _aspect = "tile__container--wide";
+                StateHasChanged();
+                break;
+            case "square":
+            default:
+                _aspect = string.Empty;
+                break;
+        }
+    }
+
+    public enum AspectRatio
+    {
+        Square,
+        Tall,
+        Wide
+    }
+
 }

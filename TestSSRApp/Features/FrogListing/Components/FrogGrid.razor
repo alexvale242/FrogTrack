@@ -1,0 +1,10 @@
+<div class="frog-grid">
+    @foreach (var frog in Frogs)
+    {
+        <FrogTile FrogName="@frog.Name" Description="@frog.Description"></FrogTile>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired] public GetFrogs.Frog[] Frogs { get; set; } = [];
+}

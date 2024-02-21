@@ -21,6 +21,9 @@
       <None Update="Features\FrogListing\Components\FrogsAreCool.razor.js">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="Features\FrogListing\Components\FrogGrid.razor.css">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 <!--    <Target Name="CheckForNpm">-->

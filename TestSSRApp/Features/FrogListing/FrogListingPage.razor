@@ -3,17 +3,12 @@
 @using TestSSRApp.Features.FrogListing.Components
 @inject IMediator Mediator;
 
-<div class="grid grid-cols-3 gap-4 h-full px-16 py-8">
-    @foreach (var frog in _frogs)
-    {
-        <FrogTile FrogName="@frog.Name" Description="@frog.Description"></FrogTile>
-    }
-</div>
+<FrogGrid Frogs="_frogs"></FrogGrid>
 
 <FrogsAreCool></FrogsAreCool>
 
 @code {
-    GetFrogs.Frog[] _frogs = [];
+    private GetFrogs.Frog[] _frogs = [];
 
     protected override async Task OnInitializedAsync()
     {

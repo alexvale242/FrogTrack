@@ -7,6 +7,14 @@
   opacity: 1;
 }
 
+.tile__container--wide {
+  grid-column: span 2;
+}
+
+.tile__container--tall {
+  grid-row: span 2;
+}
+
 .tile-description__container {
   display: flex;
   flex-direction: column;
@@ -27,6 +35,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: white;
+  line-height: 3rem;
 }
 
 .tile-description__description {
@@ -34,6 +43,7 @@
   font-weight: 500;
   color: white;
   margin-top: 2rem;
+  line-height: 2rem;
 }
 
 .tile__image {

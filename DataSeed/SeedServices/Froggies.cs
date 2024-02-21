@@ -12,7 +12,6 @@ public static class Froggies
     new Frog(new Guid("07534f09-0e24-41a7-9779-1e8bb892dbb2"), "apple", "Delicious and juicy, but don't eat this one!"),
     new Frog(new Guid("849b0a14-5106-44a4-a892-25f63d03371a"), "spots", "Has unique spots all over its body."),
     new Frog(new Guid("af6ac964-af9e-4705-bb3e-63bea30c4fd7"), "happy", "Always smiling and cheerful."),
-    new Frog(new Guid("a07c2d57-86ad-4ed3-a2d8-7d8c46b98b3d"), "froggers", "Part of a frog band, loves to jam."),
     new Frog(new Guid("3b94e9c4-93de-4c87-b5fc-6d4562b44a0f"), "angry", "Watch out for this one when it's angry!"),
     new Frog(new Guid("1742f5c2-63ac-4974-b489-1aa97bb3d8b2"), "wholesome", "Brings warmth and positivity."),
     new Frog(new Guid("2bf9d1a3-4d35-4aaf-ba34-65d51b7b54ef"), "plant", "Loves to hop around in gardens."),

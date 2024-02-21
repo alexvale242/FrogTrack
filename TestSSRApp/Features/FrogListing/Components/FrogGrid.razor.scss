@@ -1,0 +1,8 @@
+.frog-grid {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column width as needed */
+    grid-auto-rows: 400px; /* Adjust row height to fit content */
+}
